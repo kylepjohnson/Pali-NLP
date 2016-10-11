@@ -1,18 +1,30 @@
-#Word Class Guesser
+"""Word Class Guesser
+
+From https://github.com/daalft/PaliNLP
+License: GPLv2
+"""
+
+import os
 import sys
-sys.path.insert(0, './irregular')
-import irregular
-from irregular import *
+
+# irregular = os.path.expanduser('~/cltk_data/pali/stem/irregular')
+# sys.path.insert(0, './irregular')
+# import irregular
+# from irregular import *
+
+from data.irregular.irregular import *
+from data.irregular import irregularData
 
 
-#guesses word class of a given lemma
-#returns the guessed word class
 def guessWordClassFromLemma(lemma,guesses=[]):
-    guesses=[]
+    """guesses word class of a given lemma
+    returns the guessed word class
+    """
+    guesses = []
     
-    if (isIrregularNoun(lemma)):
+    if isIrregularNoun(lemma):
         return ("noun")
-    elif(isIrregularNum(lemma)):
+    elif isIrregularNum(lemma):
         return ("numeral")
     
     if (lemma.endswith("ti")):

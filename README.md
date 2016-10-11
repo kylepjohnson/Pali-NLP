@@ -2,17 +2,17 @@
 
 The stemmer outputs the stemme version of an input pali sentence. The API is Pali-NLP/Stemmer/wordClassStemmer.stem()  
 
-```shell
-import wordClassStemmer
+```python
+In [1]: import wordClassStemmer
 
-sentence='Eva.m me suta.m - eka.m samaya.m bhagavaa antaraa ca raajagaha.m antaraa ca naa.landa.m addhaanamaggappa.tipanno hoti mahataa bhikkhusa"nghena saddhi.m pa~ncamattehi bhikkhusatehi. Suppiyopi kho paribbaajako antaraa ca raajagaha.m antaraa ca naa.landa.m addhaanamaggappa.tipanno hoti saddhi.m antevaasinaa brahmadattena maa.navena.'
+In [2]: sentence = 'Eva.m me suta.m - eka.m samaya.m bhagavaa antaraa ca raajagaha
+   ...: .m antaraa ca naa.landa.m addhaanamaggappa.tipanno hoti mahataa bhikkhus
+   ...: a"nghena saddhi.m pa~ncamattehi bhikkhusatehi. Suppiyopi kho paribbaajak
+   ...: o antaraa ca raajagaha.m antaraa ca naa.landa.m addhaanamaggappa.tipanno
+   ...:  hoti saddhi.m antevaasinaa brahmadattena maa.navena.'
 
-wordClassStemmer.stem(sentence)
-Out[48]: 'Ev  sut -  samay bhagav antar c raajagah antar c naa.land addhaanamaggappa.tipann hot mahat bhikkhusa"ngh saddhi.m pa~ncamatt bhikkhusatehi. Suppiyop kh paribbaajak antar c raajagah antar c naa.land addhaanamaggappa.tipann hot saddhi.m antevaasin brahmadatt maa.navena.'
-
-wordClassStemmer.stem('namo thassa bhagavato arahatho sammasambhuddhassa')
-Out[49]: 'nam th bhagav arahath sammasambhuddh'
-```
+In [3]: wordClassStemmer.stem(sentence)
+Out[3]: 'Ev  sut - samay bhagav antar c raajagah antar c naa.land addhaanamaggappa.tipann hot mahat bhikkhusa"ngh saddhi.m pa~ncamatt bhikkhusatehi. Suppiyop kh paribbaajak antar c raajagah antar c naa.land addhaanamaggappa.tipann hot saddhi.m antevaasin brahmadatt maa.navena.'```
 
 
 The process involves a few steps. 
